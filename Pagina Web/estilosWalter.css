@@ -1,5 +1,52 @@
 /* Maquetado pagina walter */
 
-.presentacion{
-    display: inline;
+body{
+    background-color: rgb(132, 184, 148);
+}
+
+h1{
+    text-align: center;
+    color: rgb(0, 88, 5);
+}
+
+h2{
+    text-decoration: underline;
+    color: rgb(0, 88, 5);
+}
+
+h3{
+    text-decoration: underline;
+    color: rgb(0, 88, 5);
+}
+
+p{
+    
+}
+
+img{
+    margin-left: 10px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+}
+
+.redes{
+    font-weight: bold;
+}
+
+#trailers{
+    font-weight: bold;
+}
+
+.cartelera{
+    display: flex;
+    justify-content: space-around;
 }
