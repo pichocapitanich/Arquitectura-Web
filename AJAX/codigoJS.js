@@ -28,6 +28,9 @@ function presentarContenido(){
 
 }
 */
+window.onload = function(){
+    document.getElementById('enviar').onclick = presentarContenido;
+}
 
 function presentarContenido(){
 
@@ -46,17 +49,18 @@ function presentarContenido(){
 
     peticion_http.onreadystatechange = mostrarContenido();
 
-    function mostrarContenido(){
-
-        if(peticion_http.readyState == 4){
-            //aca va el desglose de la respuesta
-            document.getElementById("contenidos").innerHTML = peticion_http.responseText;
-            document.getElementById("cabeceras").innerHTML = peticion_http.getAllResponseHeaders();
-            document.getElementById("estados").innerHTML = peticion_http.statusText;
-            document.getElementById("codigo").innerHTML = peticion_http.status;
-        }
-    }
 
     peticion_http.send();
 
+}
+
+function mostrarContenido(){
+
+    if(peticion_http.readyState == 4){
+        //aca va el desglose de la respuesta
+        document.getElementById("contenidos").innerHTML = peticion_http.responseText;
+        document.getElementById("cabeceras").innerHTML = peticion_http.getAllResponseHeaders();
+        document.getElementById("estados").innerHTML = peticion_http.statusText;
+        document.getElementById("codigo").innerHTML = peticion_http.status;
+    }
 }
